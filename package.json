@@ -1,0 +1,22 @@
+{
+  "name": "urlshortpro",
+  "version": "1.0.0",
+  "main": "urlsho.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.3",
+    "nanoid": "^5.0.9",
+    "shortid": "^2.2.16",
+    "uuid": "^11.0.4"
+  }
+}
