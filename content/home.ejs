@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/gome.css">
 </head>
 <body>
     <h1>URL SHORTENER</h1>
+
     <% if (locals.id) { %>
-            <p>
-                GENERATED URL:http://localhost:9000/<%= id %>
-            </p>
+        <p>
+            GENERATED URL: 
+            <a href="http://localhost:9000/<%= id %>" target="_blank">http://localhost:9000/<%= id %></a>
+        </p>
     <% } %>
+
     <div class="fo">
         <form method="post" action="/urlshort">
-            <input type="text" placeholder="ENTER URL" name="url" required >
+            <input type="text" placeholder="ENTER URL" name="url" required>
             <button type="submit">Generate</button>
         </form>
     </div>
