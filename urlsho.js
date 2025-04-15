@@ -5,8 +5,8 @@ const port=9000;
 const shortid=require("shortid");
 const path=require("path");
 const {v4:uuidv4}=require("uuid");
-const {setuser,getuser}=require("../urlshortpro/map");
-const onlyloggedone=require("../urlshortpro/auth");
+const {setuser,getuser}=require("./map");
+// const onlyloggedone=require("./auth");
 const cookieParser = require("cookie-parser");
 const jwt=require("jsonwebtoken");
 
@@ -51,6 +51,7 @@ server.get("/",async(req,res)=>{
     return res.render('home');//browser
 });
 
+server.use(express.static(path.join(__dirname, 'public'))); //middleware for css 
 server.use(express.json()); //middleware for url
 server.use(express.urlencoded({extended:false}));
 server.use(cookieParser());
