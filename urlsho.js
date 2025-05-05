@@ -153,10 +153,10 @@ server.get("/length/:shortId",async(req,res)=>{
     const result=await mod.findOne(
         {
             shortd:shortId,
-        },
+        },                  
     )
     return res.json({
-        totalvisits:result.visitHistory.length,
+        totalvisits:result.visitHistory.length,     //work on this trouble
         details:result.visitHistory,
     });
 });
@@ -169,14 +169,14 @@ server.get("/authen/allusers",async(req,res)=>{
             return res.send("authentication done");
         }
         else{
-            return res.send("not verified");
+            return res.send("not verified");            //used to know the authentication is working while running this
         }
     }catch(error){
         console.log("there exists a error",error);
         return res.status(500).json("server side error");
     };
     
-}); //he used routes stuff so all good i have to check hoow to utilize it probably yes  so baiiii itrs done
+}); // used routes stuff so all good i have to check hoow to utilize it probably yes  so baiiii itrs done
 
 server.listen(port,(req,res)=>{
     console.log("server is running successfully");
