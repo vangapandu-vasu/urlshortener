@@ -9,6 +9,7 @@ const {setuser,getuser}=require("./map");
 // const onlyloggedone=require("./auth");
 const cookieParser = require("cookie-parser");
 const jwt=require("jsonwebtoken");
+const { timeStamp } = require("console");
 
 
 const urlSchema=new mongoose.Schema({       //schema for url
@@ -130,7 +131,7 @@ server.get("/:shortId",async(req,res)=>{
         },
         {
             $push:{
-                visitHistory:{timestamps:Date.now()},             //updataion
+                visitHistory:{timeStamp:Date.now()},             //updataion
             },
         },
         { new: true },
