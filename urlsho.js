@@ -177,7 +177,7 @@ server.get("/authen/allusers",async(req,res)=>{
         return res.status(500).json("server side error");
     };
     
-}); // used routes stuff so all good i have to check hoow to utilize it probably yes  so baiiii itrs done
+}); // used routes stuff so all good i have to check hoow to utilize it probably yes  so baiiii itrs done more refinrement is required
 
 server.listen(port,(req,res)=>{
     console.log("server is running successfully");
