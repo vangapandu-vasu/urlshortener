@@ -183,4 +183,4 @@ server.listen(port,(req,res)=>{
     console.log("server is running successfully");
 });
 
-//make it ready for depolyment add 3D models
+//make it ready for depolyment add 3D models, so basically its all backend rendering watch out
