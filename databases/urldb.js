@@ -1,0 +1,14 @@
+const urlSchema=new mongoose.Schema({       //schema for url
+    shortd:{
+        type:String,
+    },
+    redirectlink:{
+        type:String,
+        required:true
+    },
+    visitHistory:[{timestamps:{type:Number}}]
+});
+
+const mod=mongoose.model("urlbase",urlSchema); //model for url
+
+module.export=mod;
