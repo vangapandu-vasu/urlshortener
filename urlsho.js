@@ -11,9 +11,9 @@ const {setuser,getuser}=require("./map");
 // const onlyloggedone=require("./auth");
 const cookieParser = require("cookie-parser");
 
+const mongo_url = process.env.mongo_url;
 
-
-mongoose.connect("mongodb://127.0.0.1:27017/"); //connection
+mongoose.connect(mongo_url); //connection
 
 server.get("/",async(req,res)=>{
     console.log("on home page");
