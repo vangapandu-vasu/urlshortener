@@ -5,43 +5,12 @@ const port=9000;
 const shortid=require("shortid");
 const path=require("path");
 const {v4:uuidv4}=require("uuid");
+const del=require("./databases/signdb");
+const mod=require("./databases/urldb.js");
 const {setuser,getuser}=require("./map");
 // const onlyloggedone=require("./auth");
 const cookieParser = require("cookie-parser");
-const jwt=require("jsonwebtoken");
-const { timeStamp } = require("console");
 
-
-const urlSchema=new mongoose.Schema({       //schema for url
-    shortd:{
-        type:String,
-    },
-    redirectlink:{
-        type:String,
-        required:true
-    },
-    visitHistory:[{timestamps:{type:Number}}]
-});
-
-const signschema=new mongoose.Schema({
-    firstname:{
-        type:String,
-        required:true,
-    },
-    email:{                             //schema for sign up
-        type:String,
-        required:true,
-        unique:true,
-    },
-    password:{
-        type:Number,
-        required:true,
-    },
-},{timestamps:true});
-
-const mod=mongoose.model("urlbase",urlSchema); //model for url
-
-const del=mongoose.model("signusers",signschema); //model for sign up
 
 
 mongoose.connect("mongodb://127.0.0.1:27017/"); //connection
