@@ -10,8 +10,9 @@ const mod=require("./databases/urldb.js");
 const {setuser,getuser}=require("./map");
 // const onlyloggedone=require("./auth");
 const cookieParser = require("cookie-parser");
+require("dotenv").config();
 
-const mongo_url = process.env.mongo_url;
+const mongo_url = process.env.MONGO_URI;
 
 mongoose.connect(mongo_url); //connection
 

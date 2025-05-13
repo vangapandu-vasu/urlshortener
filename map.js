@@ -1,6 +1,6 @@
 
 const jwt=require("jsonwebtoken");
-const skey=process.env.passkey;
+const skey=process.env.PASSKEY;
 
 
 

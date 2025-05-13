@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 const signschema=new mongoose.Schema({
     firstname:{
         type:String,
