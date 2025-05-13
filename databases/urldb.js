@@ -13,4 +13,4 @@ const urlSchema=new mongoose.Schema({       //schema for url
 
 const mod=mongoose.model("urlbase",urlSchema); //model for url
 
-module.export=mod;
+module.exports=mod;
