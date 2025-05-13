@@ -10,11 +10,14 @@ const mod=require("./databases/urldb.js");
 const {setuser,getuser}=require("./map");
 // const onlyloggedone=require("./auth");
 const cookieParser = require("cookie-parser");
+const { error } = require("console");
 require("dotenv").config();
 
 const mongo_url = process.env.MONGO_URI;
 
-mongoose.connect(mongo_url); //connection
+mongoose.connect(mongo_url)
+.then(()=>console.log("✅ MongoDB connected successfully"))
+.catch((err)=>console.log("❌ MongoDB connection error:",err)) //connection
 
 server.get("/",async(req,res)=>{
     console.log("on home page");
