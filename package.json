@@ -4,8 +4,8 @@
   "main": "urlsho.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node urlsho.js",
+    "dev": "nodemon urlsho.js"
   },
   "author": "",
   "license": "ISC",
