@@ -83,7 +83,7 @@ server.post("/urlshort",async(req,res)=>{
     if(body.url===""){
         return res.status(400).json("bad request it cannot be empty");
     }
-    const shortId=shortid(9);
+    const shortId=shortid.generate();
     await mod.create({
         shortd:shortId,                   //creationnnn for url
         redirectlink:body.url,
