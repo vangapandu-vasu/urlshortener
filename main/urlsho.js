@@ -98,6 +98,8 @@ server.post("/urlshort",async(req,res)=>{
 
 server.get("/:shortId",async(req,res)=>{
     const shortId=req.params.shortId;
+
+    console.log("Received request for shortId:", shortId);
     const entry=await mod.findOneAndUpdate(
         {
              shortd: shortId ,
@@ -119,6 +121,7 @@ server.get("/:shortId",async(req,res)=>{
     }
 });
 
+server.use(express.static(path.join(__dirname, 'public')));
 
 
 
